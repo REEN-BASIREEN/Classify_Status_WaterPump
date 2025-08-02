@@ -7,8 +7,8 @@ from datetime import datetime
 model = load('best_model_IoT.pkl')  # ชื่อไฟล์โมเดล
 
 # URL สำหรับดึงข้อมูลจาก ThingSpeak
-THINGSPEAK_CHANNEL_ID = '2671876'  # Channel ID ของคุณ
-THINGSPEAK_API_KEY = '1GWH5IKYGZ7886W9'  # API Key ของคุณ
+THINGSPEAK_CHANNEL_ID = '******************'  # Channel ID ของคุณ
+THINGSPEAK_API_KEY = '******************'  # API Key ของคุณ
 THINGSPEAK_URL = f"https://api.thingspeak.com/channels/{THINGSPEAK_CHANNEL_ID}/feeds.json?api_key={THINGSPEAK_API_KEY}"
 
 
@@ -95,5 +95,6 @@ if response.status_code == 200:
         st.write("🚫 ไม่มีข้อมูลในฟีด")
 else:
     st.write("❌ ไม่สามารถดึงข้อมูลจาก ThingSpeak ได้")
+
 
 
